@@ -1,8 +1,7 @@
 <template>
     <div class="container">
-        <div class="row header-bar">
+        <div class="header-bar">
             <img src="/img/dc-logo.png" alt="">
-            
             <nav>
                 <ul class="menu">
                     <li class="menu-item">charters</li>
