@@ -36,6 +36,7 @@
             display: flex;
             /* padding: 10px 20px; */
             .menu-item{
+                color: black;
                 padding: 10px 10px;
                 font-size: 15px;
                 font-weight: bold;

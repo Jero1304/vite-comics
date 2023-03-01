@@ -19,5 +19,13 @@ ul,ol,li,menu{
 
 .container{
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1400px;
+}
+.row{
+    display: flex;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
 }
