@@ -4,16 +4,9 @@
             <img src="/img/dc-logo.png" alt="">
             <nav>
                 <ul class="menu">
-                    <li class="menu-item">charters</li>
-                    <li class="menu-item active">comics</li>
-                    <li class="menu-item">movies</li>
-                    <li class="menu-item">tv</li>
-                    <li class="menu-item">games</li>
-                    <li class="menu-item">collectibles</li>
-                    <li class="menu-item">videos</li>
-                    <li class="menu-item">fans</li>
-                    <li class="menu-item">news</li>
-                    <li class="menu-item">shop</li>
+                    <HeaderMenu v-for="(option, i) in options" 
+                    :key="i" 
+                    :option="option"/>
                 </ul>
             </nav>
         </div>
@@ -21,7 +14,28 @@
 </template>
 
 <script>
-    
+import HeaderMenu from "./HeaderMenu.vue"
+export default {
+    components: {
+        HeaderMenu
+    },
+    data() {
+        return {
+            options: [
+                    'charter',
+                    'comics',
+                    'movies',
+                    'TV',
+                    'games',
+                    'collectibles',
+                    'videos',
+                    'fans',
+                    'news',
+                    'shop'
+                ]
+        }
+    }
+} 
 </script>
 
 <style lang="scss">
@@ -44,6 +58,9 @@
                 &.active{
                     color: $blue;
                     border-bottom: 3px solid $blue;
+                }
+                &:hover{
+                    color: $blue;
                 }
             }
         }
