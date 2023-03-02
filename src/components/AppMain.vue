@@ -1,4 +1,5 @@
 <template>
+    <MainJumbotron/>
     <div id="bg-color-black">
         <div class="container">
             <div class="grid">
@@ -14,9 +15,12 @@
 
 <script>
     import MainCard from './MainCard.vue'
+    import MainJumbotron from './MainJumbotron.vue'
+
     export default{
         components:{
-            MainCard
+            MainCard,
+            MainJumbotron,
         },
         data() {
             return {
