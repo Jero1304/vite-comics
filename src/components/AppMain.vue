@@ -2,13 +2,20 @@
     <MainJumbotron/>
     <div id="bg-color-black">
         <div class="container">
+            <div class="current-series">
+                <p>current series</p> 
+            </div>
             <div class="grid">
                 <MainCard 
                 v-for="(card,i) in cards" 
                 :key="i"
                 :thumb="card.thumb" 
                 :series="card.series"/>
+
             </div>
+            <a href="#" class="load-btn">
+                <button type="button">load for more</button>
+            </a>
         </div>
     </div>
 </template>
@@ -123,6 +130,32 @@
                 padding-top:20px ;
                 text-transform: uppercase;
             }
+        }
+        .load-btn{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+
+            & button{
+                text-transform: uppercase;
+                font-size: 15px;
+                padding: 15px;
+                background-color: $blue;
+                color: white;
+
+            }
+        }
+        .current-series{
+            display: flex;
+            & p{
+                font-size: 25px;
+                background-color: $blue;
+                text-transform: uppercase;
+                padding: 20px;
+                position: relative;
+                top: -75px;
+            }
+
         }
     }
 
