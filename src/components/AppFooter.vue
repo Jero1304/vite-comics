@@ -2,7 +2,7 @@
     <div id="bg-color-blue">
         <div class="container">
             <ul class="menu">
-                <li class="menu-item">
+                <!-- <li class="menu-item">
                     <img src="../../public/img/buy-comics-digital-comics.png" alt="">
                     <p>digital comics</p>
                 </li>
@@ -21,7 +21,10 @@
                 <li class="menu-item">
                     <img src="../../public/img/buy-dc-power-visa.svg" alt="">
                     <p>dc power visa</p>
-                </li>
+                </li> -->
+
+                <FooterShop v-for="(icon, i) in shop.icons"
+                :key="i" :icon="icon" :text="shop.texts[i]"/>
             </ul>
         </div>
     </div>
@@ -102,55 +105,73 @@
 
 <script>
     import FooterMenu from "./FooterMenu.vue";
+    import FooterShop from "./FooterShop.vue";
     export default{
         components:{
-            FooterMenu
+            FooterMenu,
+            FooterShop
         },
         data(){
             return{
                 menu1:{
-                        title:'dc comics',
-                        links:[
-                            'charter',
-                            'comics',
-                            'TV',
-                            'games',
-                            'videos',
-                            'news'
-                        ]
-                    },
-                    menu2:{
-                        title:'Shop',
-                        links:[
-                            'Shop DC',
-                            'Shop DC Collectibles',
-                        ]
-                    },    
-                    menu3:{
-                        title:'dc',
-                        links:[
-                            'Terms of use',
-                            'privacy policy (new)',
-                            'jobs',
-                            'subscription',
-                            'Talent Workshop',
-                            'CPSC certificates',
-                            'Ratings',
-                            'shop help',
-                            'Contact use',
-                        ]
-                    },
-                    menu4:{
-                        title:'sites',
-                        links:[
-                            'dc',
-                            'MAD megazine',
-                            'DC kids',
-                            'DC universe',
-                            'dc power Visa',
-                        ]
-                    },
-                
+                    title:'dc comics',
+                    links:[
+                        'charter',
+                        'comics',
+                        'TV',
+                        'games',
+                        'videos',
+                        'news'
+                    ]
+                },
+                menu2:{
+                    title:'Shop',
+                    links:[
+                        'Shop DC',
+                        'Shop DC Collectibles',
+                    ]
+                },    
+                menu3:{
+                    title:'dc',
+                    links:[
+                        'Terms of use',
+                        'privacy policy (new)',
+                        'jobs',
+                        'subscription',
+                        'Talent Workshop',
+                        'CPSC certificates',
+                        'Ratings',
+                        'shop help',
+                        'Contact use',
+                    ]
+                },
+                menu4:{
+                    title:'sites',
+                    links:[
+                        'dc',
+                        'MAD megazine',
+                        'DC kids',
+                        'DC universe',
+                        'dc power Visa',
+                    ]
+                },
+
+                shop:{
+                    icons:[
+                        '../../public/img/buy-comics-digital-comics.png',
+                        '../../public/img/buy-comics-merchandise.png',
+                        '../../public/img/buy-comics-subscriptions.png',
+                        '../../public/img/buy-comics-shop-locator.png',
+                        '../../public/img/buy-dc-power-visa.svg'
+                    ],
+                    texts:[
+                        'digital comics',
+                        'dc merchandise',
+                        'subscription',
+                        'comic shop locator',
+                        'dc power visa'
+                    ]
+                }                
             }
         }
     }
@@ -203,6 +224,7 @@
                     li{
                         padding-bottom: 7px;
                         color: lightgrey;
+                        text-transform: capitalize
                     }
                 }
             }
