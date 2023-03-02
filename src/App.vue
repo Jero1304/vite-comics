@@ -16,10 +16,8 @@ export default {
   <AppHeader/>
   <AppMain/>
   <AppFooter/>
-
-
 </template>
 
 <style lang="scss">
-@use './style/patrials/general.scss'
+@use './style/patrials/general.scss';
 </style>

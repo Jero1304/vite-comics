@@ -32,52 +32,43 @@
 
                 <div class="col">
                     <ul>
-                        <h1>Title</h1>
-                        
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
+                        <h1>{{ menu1.title }}</h1>
+                        <FooterMenu 
+                        v-for="(link, i) in menu1.links" 
+                        :key="i" 
+                        :title="menu1.title" 
+                        :link="link"/>                                                
                     </ul>
                     
                     <ul>
-                        <h1>Title</h1>
-                        
-                        <li>text</li>
-                        <li>text</li>
+                        <h1>{{ menu2.title }}</h1>
+                        <FooterMenu 
+                        v-for="(link, i) in menu2.links" 
+                        :key="i" 
+                        :title="menu2.title" 
+                        :link="link"/>                                                              
                     </ul>
                 </div>
                 
                 <div class="col">
                     <ul>
-                        <h1>Title</h1>
-                        
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
+                        <h1>{{ menu3.title }}</h1>
+                        <FooterMenu 
+                        v-for="(link, i) in menu3.links" 
+                        :key="i" 
+                        :title="menu3.title" 
+                        :link="link"/> 
                     </ul>
                 </div>
 
                 <div class="col">
                     <ul>
-                        <h1>Title</h1>
-                        
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
-                        <li>text</li>
+                        <h1>{{ menu4.title }}</h1>
+                        <FooterMenu 
+                        v-for="(link, i) in menu4.links" 
+                        :key="i" 
+                        :title="menu4.title" 
+                        :link="link"/> 
                     </ul>
                 </div>
 
@@ -85,7 +76,6 @@
                     <img src="../../public/img/dc-logo-bg.png" alt="">
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -111,12 +101,65 @@
 </template>
 
 <script>
-
+    import FooterMenu from "./FooterMenu.vue";
+    export default{
+        components:{
+            FooterMenu
+        },
+        data(){
+            return{
+                menu1:{
+                        title:'dc comics',
+                        links:[
+                            'charter',
+                            'comics',
+                            'TV',
+                            'games',
+                            'videos',
+                            'news'
+                        ]
+                    },
+                    menu2:{
+                        title:'Shop',
+                        links:[
+                            'Shop DC',
+                            'Shop DC Collectibles',
+                        ]
+                    },    
+                    menu3:{
+                        title:'dc',
+                        links:[
+                            'Terms of use',
+                            'privacy policy (new)',
+                            'jobs',
+                            'subscription',
+                            'Talent Workshop',
+                            'CPSC certificates',
+                            'Ratings',
+                            'shop help',
+                            'Contact use',
+                        ]
+                    },
+                    menu4:{
+                        title:'sites',
+                        links:[
+                            'dc',
+                            'MAD megazine',
+                            'DC kids',
+                            'DC universe',
+                            'dc power Visa',
+                        ]
+                    },
+                
+            }
+        }
+    }
 </script>
 
 <style lang="scss">
+@use '../style/patrials/variables' as*;
     #bg-color-blue{
-        background-color: #0282F9;
+        background-color: $blue;
     }
     .menu{
             display: flex;
@@ -174,7 +217,7 @@
     }
 
     .social{
-        background-color: #303030;
+        background-color: $black;
         padding: 40px 0;
         position: relative;
         top: -120px;
@@ -185,7 +228,7 @@
 
             .sign-btn{
                 padding: 20px;
-                border: 3px solid #0282F9;
+                border: 3px solid $blue;
                 color: white;
                 text-transform: uppercase;
                 font-size: 20px;
@@ -200,7 +243,7 @@
                     padding: 0 10px;
                 }
                 h1{
-                    color: #0282F9;
+                    color: $blue;
                     text-transform: uppercase;
                     font-size: 30px;
                     padding-right: 20px;

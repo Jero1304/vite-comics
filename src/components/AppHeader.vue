@@ -21,11 +21,11 @@
 </template>
 
 <script>
-
+    
 </script>
 
 <style lang="scss">
-@use '../style/patrials/variables.scss';
+@use '../style/patrials/variables' as *;
     .header-bar{
         display: flex;
         justify-content: space-between;
@@ -34,7 +34,6 @@
 
         .menu{
             display: flex;
-            /* padding: 10px 20px; */
             .menu-item{
                 color: black;
                 padding: 10px 10px;
@@ -43,7 +42,8 @@
                 text-transform: uppercase;
 
                 &.active{
-                    color: #0282F9;
+                    color: $blue;
+                    border-bottom: 3px solid $blue;
                 }
             }
         }

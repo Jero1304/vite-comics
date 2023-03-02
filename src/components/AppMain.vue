@@ -2,7 +2,7 @@
     <div id="bg-color-black">
         <div class="container">
             <div class="main-content">
-                <h1>CONTENT</h1>
+                
             </div>
         </div>
     </div>
@@ -13,8 +13,9 @@
 </script>
 
 <style lang="scss">
+@use '../style/patrials/variables' as *;
     #bg-color-black{
-        background-color: #1C1C1C;
+        background-color: $black;
         color: white;
         padding: 40px 0;
     }
