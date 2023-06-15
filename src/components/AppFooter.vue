@@ -159,10 +159,12 @@ export default {
         font-size: 15px;
         text-transform: uppercase;
         color: white;
+        cursor: pointer;
 
         img {
             padding: 0 10px;
             max-width: 70px;
+
         }
     }
 }
@@ -237,7 +239,15 @@ export default {
             align-items: center;
 
             img {
-                padding: 0 10px;
+                margin: 0 10px;
+
+                &:hover {
+                    border-radius: 999px;
+                    // border: 1px solid red;
+                    border: solid 2px #34d2fd;
+                    transition: border-width 0.3s;
+
+                }
             }
 
             h1 {

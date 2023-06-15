@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style>
+.card{
+    cursor: pointer;
+}
 .card img {
     width: 200px;
     height: 200px;
